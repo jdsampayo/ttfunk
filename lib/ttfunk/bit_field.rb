@@ -25,7 +25,7 @@ module TTFunk
     # @param pos [Integer]
     # @return [Boolean]
     def on?(pos)
-      (value & (2**pos)).positive?
+      value.allbits?(2**pos)
     end
 
     # Set bit off.

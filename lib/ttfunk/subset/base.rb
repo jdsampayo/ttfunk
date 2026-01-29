@@ -102,7 +102,7 @@ module TTFunk
           end
 
         additional_ids = collected.values
-          .select { |g| g && g.compound? }
+          .select { |g| g&.compound? }
           .map(&:glyph_ids)
           .flatten
 
